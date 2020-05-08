@@ -61,6 +61,9 @@ plt.show()
 # delete last element of array from our array
 new_y = numpy.delete(new_y, -1)
 
+# Edit YOUR_PATH to path you want to save your file:
+# Example: C:\Users\Name\Desktop\my_file_2.csv
+
 # Save array witout last element to csv file
 numpy.savetxt(r'YOUR_PATH', new_y, newline = ',',fmt= '%-1.1d')
 # Save last element to csv file (this remove last comma)
