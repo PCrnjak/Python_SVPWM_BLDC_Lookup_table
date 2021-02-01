@@ -8,7 +8,7 @@ numpy.set_printoptions(suppress=True)
 
 # Change these values depending on you motor and encoder 
 encoder_res = 1024
-motor_poles = 21
+motor_poles = 21 # for 24N22P use 11 for 36N42P use 21 for 11N14P use 7
 
 # Variable to adjust peak value of saddle to number we want 
 # Usually peak must be 2 * A
@@ -34,7 +34,7 @@ for n in range(sample+1):
     temp = (min(sin1[n],sin2[n],sin3[n]) + max(sin1[n],sin2[n],sin3[n])) /2;
     phase.append(sin1[n] - temp + A )
 
-n = int(motor_poles / 3)
+n = int(motor_poles)
 print(f"We need {n} periods for whole rotation")
 
 y = phase * n
